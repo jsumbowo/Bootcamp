@@ -1,15 +1,48 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Reflection.Metadata.Ecma335;
+using System.Xml.XPath;
+
 class Program
 {
 	static void Main()
 	{
-		// Dog Bruno = new Dog("Bruno", 1, "pomerian");
+		// Uncomment this following line for Dog class testing
+		// Dog Bruno = new Dog("Bruno");
 		// Bruno.Greet();
 		
-		Calculator myCalc = new Calculator();
+		// Uncomment this following line for Calculator class testing
+		// Calculator myCalc = new Calculator();
+		// double myResult = myCalc.Add(2,3,9.2);
+		// Console.WriteLine($"The result is: {myResult}");
 		
-		double myResult = myCalc.Add(2,3,9.2);
+		Console.WriteLine("This is your calculator, please put an input !!!");
+		string userInput  = "12 + 15";
+		string[] eachInput = userInput.Split(' ');
+		double firstNum = Double.Parse(eachInput[0]);
+		double secNum    = Double.Parse(eachInput[2]);
+		double result = 0;
 		
-		Console.WriteLine($"The result is: {myResult}");
+		if (eachInput[1] == "+")
+		{
+			result = firstNum + secNum;
+		}
+		else if(eachInput[2] == "-")
+		{
+			result = firstNum - secNum;
+		}
+		else if(eachInput[2] == "x")
+		{
+			result = firstNum * secNum;
+		}
+		else if(eachInput[2] == "/")
+		{
+			result = firstNum / secNum;
+		}
+		else
+		{
+			Console.WriteLine("Please input the rights math symbol.");
+		}
+		
+		Console.WriteLine($"The result is {result}");
 	}
 }
