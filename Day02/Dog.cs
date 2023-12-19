@@ -10,7 +10,7 @@ class Dog
 		Console.WriteLine($"I am a {species} dog and I am {age} years old");
 	}
 	
-	public Dog(string dogName, int dogAge, string dogSpecies)
+	public Dog(string dogName = "unknown", int dogAge = 0, string dogSpecies = "unknown")
 	{
 		name = dogName;
 		age = dogAge;
