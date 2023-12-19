@@ -1,7 +1,6 @@
-class Dog
+class Dog : Animal
 {
-	public string name;
-	public int age;
+
 	public string species;
 	
 	public void Greet()
@@ -15,6 +14,7 @@ class Dog
 		name = dogName;
 		age = dogAge;
 		species = dogSpecies;
+		Greet();
 	}
 	
 }
