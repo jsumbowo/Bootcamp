@@ -1,15 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Net.NetworkInformation;
 using System.Security.Cryptography.X509Certificates;
+using Day03;
 using Encapsulation;
 
 class Program
 {
 	static void Main()
 	{
-		Console.WriteLine("Hello, World!");
-		Encap demo = new Encap();
-		int number = demo.x;
+		BaseOveriding baseOveriding = new GrandChildOveriding();
+		baseOveriding.Demo();
+		Console.WriteLine(baseOveriding.id);
 	}
 }
 
