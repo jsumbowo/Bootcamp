@@ -7,11 +7,11 @@ class Program
 	static void Main()
 	{
 		// Uncomment this following line for Dog class testing
-		Dog Bruno = new Dog("Bruno");
+		// Dog Bruno = new Dog("Bruno");
 		
-		Cat Oreo = new Cat("Oreo", 1, "British Shorthair");
+		// Cat Oreo = new Cat("Oreo", 1, "British Shorthair");
 		
-		Bird Pulp = new Bird("Pulp", 1, "Love Bird");
+		// Bird Pulp = new Bird("Pulp", 1, "Love Bird");
 		
 		// Uncomment this following line for Calculator class testing
 		// Calculator myCalc = new Calculator();
@@ -47,5 +47,8 @@ class Program
 		// }
 		
 		// Console.WriteLine($"The result is {result}");
+		
+		Child2 myAnimal = new Child2(2, "Bruno");
+		
 	}
 }
