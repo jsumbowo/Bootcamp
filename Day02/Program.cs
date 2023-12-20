@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Reflection.Metadata.Ecma335;
 using System.Xml.XPath;
+using Encapsulation;
 
 class Program
 {
@@ -48,7 +49,13 @@ class Program
 		
 		// Console.WriteLine($"The result is {result}");
 		
-		Child2 myAnimal = new Child2(2, "Bruno");
-		
+	}
+}
+
+class Demo : Encap
+{
+	public void getMyX()
+	{
+		Console.WriteLine(x);
 	}
 }

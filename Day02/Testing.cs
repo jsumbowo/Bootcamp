@@ -7,12 +7,25 @@ class Animal2
 		age = myAge;
 		name = myName;
 	}
+	public Animal2(int myAge)
+	{
+		age = myAge;
+		name = "unknown";
+	}
+	public Animal2()
+	{
+		name = "unknown";
+		age  = 0;
+		Console.Write("Animal is born");
+	}
 }
 
 class Child2 : Animal2
 {
-	public Child2(int myAge, string myName) : base (myAge, myName)
+	string species;
+	public Child2(int myAge, string myName, string mySpecies) : base(myAge, myName)
 	{
+		species = mySpecies;
 		Console.WriteLine(name);
 	}
 }
