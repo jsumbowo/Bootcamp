@@ -7,7 +7,7 @@ class Program
 {
 	static void Main()
 	{
-		string[] myInput = { "10", "*", "12", "/", "2" };
+		string[] myInput = { "10", "+", "12", "/", "2", "-", "6" };
 
 		int lengthMyInput = myInput.Length;
 		int mathOpIndex = 1;
@@ -21,7 +21,6 @@ class Program
 		{
 			while (maxIndex >= 3)
 			{
-				// Console.WriteLine("ini belum dibuat");
 				if (IsMathOrderRight(myInput, mathOpIndex))
 				{
 					double result = MathCalculation(myInput[mathOpIndex - 1], myInput[mathOpIndex + 1], myInput[mathOpIndex]);
