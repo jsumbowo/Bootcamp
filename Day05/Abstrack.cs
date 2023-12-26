@@ -1,17 +1,17 @@
 abstract class Animal
 {
-	private int age;
+	private int _age;
 	string name;
 	
 	public Animal(int aAge, string aName)
 	{
 		name = aName;
-		age = aAge;
+		_age = aAge;
 	}
 	
 	public void PrintAge()
 	{
-		Console.WriteLine("Age: " + age);
+		Console.WriteLine("Age: " + _age);
 	}
 	
 	public abstract void MakeSound();
