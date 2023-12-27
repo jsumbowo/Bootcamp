@@ -16,7 +16,11 @@ public interface ILaugh
 {
 	public void Laugh();
 }
-public class Characteristics {}
+public class Characteristics 
+{
+	public string colorTone = "diverse";
+	public string nationalAnthem = "Indonesia Raya"; 
+}
 public class Indonesian : IHuman
 {
 	private string _name;
@@ -37,3 +41,4 @@ public class Indonesian : IHuman
 	}
 	
 }
+

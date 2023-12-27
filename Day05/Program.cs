@@ -13,9 +13,39 @@ class Program
 		
 		// EducationChecker educationChecker = new EducationChecker(new SurabayaStudent("Joel", 23));
 		
-		Indonesian joel = new Indonesian("Joel");
-		joel.Greet();
-		joel.
 		
+		// Characteristics indonesian = new Characteristics();
+		// Indonesian joel = new Indonesian("Joel", indonesian);
+		// joel.Greet();
+		// Console.WriteLine(joel.Characteristics.colorTone);
+		
+		// ThisStatic.Joke() ;
+		ThisStatic.PostIncrement();
+		ThisStatic.PreIncrement();
+	}
+}
+
+public static class ThisStatic
+{
+	static int count = 0;
+	static ThisStatic()
+	{
+		Console.WriteLine("Hello, this is static class");
+	}
+	
+	public static void Joke()
+	{
+		Console.WriteLine("Whiteboards are remarkable");
+	}
+	
+	public static void PostIncrement()
+	{
+		Console.WriteLine("Count before post-increment: "+ count);
+		Console.WriteLine("Count after post-increment: "+ count++);
+	}
+	public static void PreIncrement()
+	{
+		Console.WriteLine("Count before pre-increment: "+ count);
+		Console.WriteLine("Count after pre-increment: "+ ++count);
 	}
 }
