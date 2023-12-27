@@ -8,11 +8,13 @@ class Program
 	static void Main ()
 	{
 		GameController myGameController = new();
-		Console.WriteLine("Game status is: " + myGameController.CheckGame());
+		SMS mySMS = new SMS();
+		Email myEmail = new Email();
+		myGameController.myDelegate += mySMS.SendSMS;
+		myGameController.myDelegate += myEmail.SendEmail;
 		myGameController.AddPlayer(new Beginer("Joel"));
-		myGameController.MakeReady();
-		myGameController.CheckGame().Dumb();
-		true.Dumb();
+		// myGameController.MakeReady();
+		
 		// Console.WriteLine("Game status is: " + myGameController.CheckGame());
 		// Console.WriteLine("Player Name: " + myGameController.CheckPlayerName());
 		
@@ -58,11 +60,14 @@ class Intermediate : IPlayer
 	}
 }
 
+//Making a delegate to communicate to the SMS and Email class
+public delegate void MyDelegate(string message);
 class GameController
 {
 	private GameStatus _gameStatus;
 	private IPlayer _player;
 	
+	public MyDelegate myDelegate;
 	public GameController()
 	{
 		_gameStatus = GameStatus.NotInitialized;
@@ -90,6 +95,7 @@ class GameController
 		else
 		{
 			_gameStatus = GameStatus.Ready;
+			myDelegate.Invoke("Ready");
 			return true;
 		}
 	}
