@@ -9,8 +9,10 @@ class Program
 		Console.WriteLine("Game status is: " + myGameController.CheckGame());
 		myGameController.AddPlayer(new Beginer("Joel"));
 		myGameController.MakeReady();
-		Console.WriteLine("Game status is: " + myGameController.CheckGame());
-		Console.WriteLine("Player Name: " + myGameController.CheckPlayerName());
+		myGameController.CheckGame().Dumb();
+		true.Dumb();
+		// Console.WriteLine("Game status is: " + myGameController.CheckGame());
+		// Console.WriteLine("Player Name: " + myGameController.CheckPlayerName());
 		
 	}
 }
@@ -117,4 +119,16 @@ class GameController
 	}
 }
 
+// Making an extension method
+// 1. Need a static class public 
+// 2. Need a static method 
+// 3. Using this 
 
+static class MyExtensionMethod
+{
+	// I want to make an extenstion that can print anything to the console
+	public static void Dumb(this object input)
+	{
+		Console.WriteLine(input);
+	}
+}
