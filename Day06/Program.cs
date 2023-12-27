@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Security.Cryptography.X509Certificates;
+using System.Numerics;
+
 
 class Program
 {
@@ -130,5 +132,36 @@ static class MyExtensionMethod
 	public static void Dumb(this object input)
 	{
 		Console.WriteLine(input);
+	}
+}
+
+//Generic Constraint
+//Generic : All class can set the type
+//Constaint : Limit to a class with condition
+class Calculator<T> where T:IAdditionOperators<T,T,T>
+{
+	public T Addition(T a, T b) 
+	{
+		return a + b;
+	}
+}
+
+//Operator Overloading
+public class Car : IAdditionOperators<Car, Car, Car>
+{
+	public int price;
+	public int year;
+	public string name;
+	public Car(int price, int year, string name)  
+	{
+		this.price = price;
+		this.year = year;
+		this.name = name;
+	}
+	//Operator Overloading
+	public static Car operator +(Car left, Car right) 
+	{
+		Car resultCar = new Car(left.price+right.price, 0, "");
+		return resultCar;
 	}
 }
