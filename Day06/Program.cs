@@ -8,6 +8,7 @@ class Program
 		GameController myGameController = new();
 		Console.WriteLine("Game status is: " + myGameController.CheckGame());
 		myGameController.AddPlayer(new Beginer("Joel"));
+		myGameController.MakeReady();
 		Console.WriteLine("Game status is: " + myGameController.CheckGame());
 		Console.WriteLine("Player Name: " + myGameController.CheckPlayerName());
 		
@@ -68,14 +69,25 @@ class GameController
 		{
 			return false;	
 		}
-		if (_gameStatus == GameStatus.NotInitialized)
-		
+		if (_gameStatus != GameStatus.NotInitialized)
 		{
 			return false;
 		}
 		_player = player;
-		_gameStatus = GameStatus.Ready;
 		return true;
+	}
+	
+	public bool MakeReady()
+	{
+		if (_gameStatus != GameStatus.NotInitialized)
+		{
+			return false;
+		}
+		else
+		{
+			_gameStatus = GameStatus.Ready;
+			return true;
+		}
 	}
 	
 	public GameStatus CheckGame()
