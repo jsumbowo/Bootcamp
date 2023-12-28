@@ -3,10 +3,23 @@ class Program
 {
 	static void Main()
 	{
-		Youtuber youtuber = new Youtuber();
-		Subscriber subs1  = new Subscriber("subs1", youtuber);
-		Subscriber subs2  = new Subscriber("subs2", youtuber);
-		youtuber.UploadVideo();
+		// Youtuber youtuber = new Youtuber();
+		// Subscriber subs1  = new Subscriber("subs1", youtuber);
+		// Subscriber subs2  = new Subscriber("subs2", youtuber);
+		// youtuber.UploadVideo();
+		
+		//Trying Event Handler
+		YoutuberEventHandler Atta = new YoutuberEventHandler("Atta");
+		YoutuberEventHandler Radit = new YoutuberEventHandler("Radit");
+		SubscriberEventHandler Yanto = new SubscriberEventHandler("Yanto");
+		SubscriberEventHandler Jarot = new SubscriberEventHandler("Jarot");
+		
+		Atta.AddNewSub(Yanto.GetNotification);
+		Radit.AddNewSub(Yanto.GetNotification);
+		Radit.AddNewSub(Jarot.GetNotification);
+		
+		Atta.UploadVideo();
+		Radit.UploadVideo();
 	}
 }
 
