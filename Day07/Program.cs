@@ -9,17 +9,30 @@ class Program
 		// youtuber.UploadVideo();
 		
 		//Trying Event Handler
-		YoutuberEventHandler Atta = new YoutuberEventHandler("Atta");
-		YoutuberEventHandler Radit = new YoutuberEventHandler("Radit");
-		SubscriberEventHandler Yanto = new SubscriberEventHandler("Yanto");
-		SubscriberEventHandler Jarot = new SubscriberEventHandler("Jarot");
+		// YoutuberEventHandler Atta = new YoutuberEventHandler("Atta");
+		// YoutuberEventHandler Radit = new YoutuberEventHandler("Radit");
+		// PublisherEventHandler Bernard = new PublisherEventHandler("Bernard");
+		// SubscriberEventHandler Yanto = new SubscriberEventHandler("Yanto");
+		// SubscriberEventHandler Jarot = new SubscriberEventHandler("Jarot");
 		
-		Atta.AddNewSub(Yanto.GetNotification);
-		Radit.AddNewSub(Yanto.GetNotification);
-		Radit.AddNewSub(Jarot.GetNotification);
+		// Atta.AddNewSub(Yanto.GetNotification);
+		// Radit.AddNewSub(Yanto.GetNotification);
+		// Radit.AddNewSub(Jarot.GetNotification);
+		// Bernard.AddNewSub(Jarot.GetNotificationPublisher);
 		
-		Atta.UploadVideo();
+		// Atta.UploadVideo();
+		// Radit.UploadVideo();
+		// Bernard.UploadVideo();
+		
+		//TRYING ACTION
+		YoutuberAction Radit = new YoutuberAction("Radit");
+		YoutuberAction Atta = new YoutuberAction("Atta");
+		SubscriberAction Jarwo = new SubscriberAction("Jarwo");
+		SubscriberAction Kamil = new SubscriberAction("Kamil");
+		Radit.AddSubsriber(Jarwo.GetNotification);
+		Radit.AddSubsriber(Kamil.GetNotification);
 		Radit.UploadVideo();
+		Atta.UploadVideo();
 	}
 }
 
