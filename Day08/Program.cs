@@ -3,7 +3,14 @@ class Program
 {
 	static void Main()
 	{
+		//Lambda Expression => creating function without name (biasanya untuk assign ke delegate)
+		Func <int, int, bool> myFunc;
+		myFunc =(int a, int b) => {return a > b;};
 		
+		Action <string> myAction;
+		myAction = (string message) => {Console.WriteLine($"{message}");};
+		Console.WriteLine(myFunc(2,5));
+		myAction("Hello World !");
 	}
 }
 
