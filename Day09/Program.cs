@@ -5,46 +5,55 @@ class Program
 	static void Main()
 	
 	{
-		Beginer beginer = new Beginer();
-		beginer.Greet();
-		List<int> myList = new List<int>();
-		HashSet<int> hashOne = new HashSet<int>();
+		// Beginer beginer = new Beginer();
+		// beginer.Greet();
+		// List<int> myList = new List<int>();
+		// HashSet<int> hashOne = new HashSet<int>();
 		
-		for (int i= 1; i<=3 ; i++)
+		// for (int i= 1; i<=3 ; i++)
 		
-		{
-			hashOne.Add(i);
-		}
+		// {
+		// 	hashOne.Add(i);
+		// }
 		
-		HashSet<int> hashTwo = new HashSet<int>(){2, 3, 4};
-		// 3.Dump();
-		hashOne.TryGetValue(3, out int value);
-		foreach (int hash in hashOne)
+		// HashSet<int> hashTwo = new HashSet<int>(){2, 3, 4};
+		// // 3.Dump();
+		// hashOne.TryGetValue(3, out int value);
+		// foreach (int hash in hashOne)
 
+		// {
+		// 	hash.Dump();
+		// }
+		// //Queue is FIFO 
+		// Queue<int> queue = new Queue<int>();
+		// queue.Enqueue(3);
+		// queue.Enqueue(4);
+		// int result = queue.Dequeue(); //untuk ngambil
+		// Console.WriteLine(queue.Peek()); //untuk ngeliat aja ga ngambil
+		// //Stack is LIFO
+		// Stack<int> stack = new Stack<int>();
+		// stack.Push(2);
+		// stack.Push(3);
+		// int resultStack = stack.Pop();
+		// Console.WriteLine(stack.Peek());
+		
+		CardGame cardGame = new();
+		cardGame.AddPlayer("Joko", Card.alpha);
+		cardGame.AddPlayer("Jhonny", Card.beta);
+		foreach(var kvp in cardGame.PlayerList())
+		
 		{
-			hash.Dump();
+			Console.WriteLine($"{kvp.Key}: {kvp.Value}");
 		}
-		//Queue is FIFO 
-		Queue<int> queue = new Queue<int>();
-		queue.Enqueue(3);
-		queue.Enqueue(4);
-		int result = queue.Dequeue(); //untuk ngambil
-		Console.WriteLine(queue.Peek()); //untuk ngeliat aja ga ngambil
-		//Stack is LIFO
-		Stack<int> stack = new Stack<int>();
-		stack.Push(2);
-		stack.Push(3);
-		int resultStack = stack.Pop();
-		Console.WriteLine(stack.Peek());
 	}
 }
 
-abstract class Player
+abstract class PlayerAbs
 {
 	public abstract void Greet();
 }
 
-class Beginer : Player
+class Beginer : PlayerAbs
 
 {
 	public override void Greet()
@@ -83,4 +92,30 @@ public static class MyDump
 	{
 		Console.WriteLine(myObject);
 	}
+}
+
+public enum Card
+
+{
+	alpha,
+	beta, 
+	gamma,
+}
+
+public class CardGame
+{
+	private Dictionary<string, Card> _playerList = null!;
+	
+	
+	public void AddPlayer(string name, Card type)
+	
+	{
+		_playerList.Add(name, type);
+	}
+	
+	public Dictionary<string, Card> PlayerList()
+	{
+		return _playerList;
+	}
+	
 }
