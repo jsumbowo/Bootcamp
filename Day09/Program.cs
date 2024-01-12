@@ -37,14 +37,16 @@ class Program
 		// int resultStack = stack.Pop();
 		// Console.WriteLine(stack.Peek());
 		
-		CardGame cardGame = new();
-		cardGame.AddPlayer("Joko", Card.alpha);
-		cardGame.AddPlayer("Jhonny", Card.beta);
-		foreach(var kvp in cardGame.PlayerList())
+		// CardGame cardGame = new();
+		// cardGame.AddPlayer("Joko", Card.alpha);
+		// cardGame.AddPlayer("Jhonny", Card.beta);
+		// foreach(var kvp in cardGame.PlayerList())
 		
-		{
-			Console.WriteLine($"{kvp.Key}: {kvp.Value}");
-		}
+		// {
+		// 	Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+		// }
+		string input = "abc";
+		Console.WriteLine(input[1]);
 	}
 }
 
@@ -104,7 +106,7 @@ public enum Card
 
 public class CardGame
 {
-	private Dictionary<string, Card> _playerList = null!;
+	private Dictionary<string, Card> _playerList = new Dictionary<string, Card>();
 	
 	
 	public void AddPlayer(string name, Card type)
