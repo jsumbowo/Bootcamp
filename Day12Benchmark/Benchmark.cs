@@ -2,8 +2,7 @@ using System.Text;
 using BenchmarkDotNet.Attributes;
 
 [MemoryDiagnoser]
-
-class StringBenchmark
+public class StringBenchmark
 {
 	[Params(1, 10, 100)]
 	public int Iteration;
