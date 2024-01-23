@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day14FileStream", "Day14Fil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day14XMLSerialization", "Day14XMLSerialization\Day14XMLSerialization.csproj", "{F31ADC0A-2392-420A-862A-07D03F7B387A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day14JSONSer", "Day14JSONSer\Day14JSONSer.csproj", "{59231A63-4140-42FE-A2F8-8D89E16D70B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -120,5 +122,9 @@ Global
 		{F31ADC0A-2392-420A-862A-07D03F7B387A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F31ADC0A-2392-420A-862A-07D03F7B387A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F31ADC0A-2392-420A-862A-07D03F7B387A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59231A63-4140-42FE-A2F8-8D89E16D70B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59231A63-4140-42FE-A2F8-8D89E16D70B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59231A63-4140-42FE-A2F8-8D89E16D70B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59231A63-4140-42FE-A2F8-8D89E16D70B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
