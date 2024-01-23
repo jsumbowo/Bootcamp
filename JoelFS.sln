@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day13AsyncAwait", "Day13Asy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day14FileStream", "Day14FileStream\Day14FileStream.csproj", "{EE749B3F-4765-4FDC-B00E-F16C71BA12D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day14XMLSerialization", "Day14XMLSerialization\Day14XMLSerialization.csproj", "{F31ADC0A-2392-420A-862A-07D03F7B387A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,5 +116,9 @@ Global
 		{EE749B3F-4765-4FDC-B00E-F16C71BA12D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE749B3F-4765-4FDC-B00E-F16C71BA12D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE749B3F-4765-4FDC-B00E-F16C71BA12D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31ADC0A-2392-420A-862A-07D03F7B387A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31ADC0A-2392-420A-862A-07D03F7B387A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31ADC0A-2392-420A-862A-07D03F7B387A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31ADC0A-2392-420A-862A-07D03F7B387A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
