@@ -28,8 +28,37 @@ public class DataBase : DbContext
 			product.Property(p => p.UnitPrice).IsRequired(true).HasColumnType("money");
 			product.HasOne(p => p.Category).WithMany(c => c.Products).HasForeignKey(p => p.CategoryId);
 		});
+		//Adding data using DataSeeding
+		modelBuilder.Entity<Category>().HasData(
+			new Category() 
+			{
+				CategoryId = 1,
+				CategoryName = "Electronic",
+				Description = "Bebas"
+			},
+			new Category() 
+			{
+				CategoryId = 2,
+				CategoryName = "Seafood",
+				Description = "Bebas"
+			}
+		);
+		modelBuilder.Entity<Product>().HasData(
+			new Product() 
+			{
+				ProductId = 1,
+				ProductName = "Laptop",
+				CategoryId = 1,
+				UnitPrice = 10
+			},
+			new Product() 
+			{
+				ProductId = 2,
+				ProductName = "Shrimp",
+				CategoryId = 2,
+				UnitPrice = 1
+			}
+		);
 	}
-
-
 	
 }
