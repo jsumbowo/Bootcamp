@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GClogger", "GClogger\GClogg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqLiteTutor", "SqLiteTutor\SqLiteTutor.csproj", "{926ECD5F-86FE-4761-AE83-09CF81FD91DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBCodeFirst", "DBCodeFirst\DBCodeFirst.csproj", "{EA884C60-1D8E-4772-B699-ACC937E0B6B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -156,6 +158,10 @@ Global
 		{926ECD5F-86FE-4761-AE83-09CF81FD91DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{926ECD5F-86FE-4761-AE83-09CF81FD91DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{926ECD5F-86FE-4761-AE83-09CF81FD91DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA884C60-1D8E-4772-B699-ACC937E0B6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA884C60-1D8E-4772-B699-ACC937E0B6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA884C60-1D8E-4772-B699-ACC937E0B6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA884C60-1D8E-4772-B699-ACC937E0B6B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
