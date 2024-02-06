@@ -1,0 +1,15 @@
+@model Category
+<h2> Are You Sure to Delete This Category ?</h2>
+
+<ul>
+    <li>
+        <button class="btn-normal"><a asp-controller="Category" asp-action="Index">No</a></button>
+    </li>
+    <li>
+        <form method="post">
+            <input hidden asp-for=@Model.CategoryId/>
+            <button class= "btn-danger" type="submit">Yes</button>
+            @* <a class="btn btn-danger" type = "submit">Yes</a> *@
+        </form>
+    </li>
+</ul>
