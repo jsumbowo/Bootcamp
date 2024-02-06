@@ -9,7 +9,8 @@ public class DataBase : DbContext
 	//Connect to the database
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
-		optionsBuilder.UseSqlite("FileName=./DataBase.db");
+		// optionsBuilder.UseSqlite("FileName=./DataBase.db");
+		optionsBuilder.UseNpgsql("Host=localhost:5432;Database=FirstDatabase;Username=postgres;Password=postgres");
 	}
 	//Set property and relation of each entity in database
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -59,6 +60,5 @@ public class DataBase : DbContext
 				UnitPrice = 1
 			}
 		);
-	}
-	
+	}	
 }

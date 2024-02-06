@@ -53,6 +53,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqLiteTutor", "SqLiteTutor\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBCodeFirst", "DBCodeFirst\DBCodeFirst.csproj", "{EA884C60-1D8E-4772-B699-ACC937E0B6B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Try", "Try\Try.csproj", "{29089D67-0648-4556-A097-9C2E1F3C62FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WVCTutor", "WVCTutor\WVCTutor.csproj", "{F445CB5F-F981-435D-B7C8-E5959AE7B4F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -162,6 +166,14 @@ Global
 		{EA884C60-1D8E-4772-B699-ACC937E0B6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA884C60-1D8E-4772-B699-ACC937E0B6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA884C60-1D8E-4772-B699-ACC937E0B6B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29089D67-0648-4556-A097-9C2E1F3C62FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29089D67-0648-4556-A097-9C2E1F3C62FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29089D67-0648-4556-A097-9C2E1F3C62FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29089D67-0648-4556-A097-9C2E1F3C62FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F445CB5F-F981-435D-B7C8-E5959AE7B4F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F445CB5F-F981-435D-B7C8-E5959AE7B4F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F445CB5F-F981-435D-B7C8-E5959AE7B4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F445CB5F-F981-435D-B7C8-E5959AE7B4F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
